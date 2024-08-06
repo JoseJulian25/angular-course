@@ -12,6 +12,7 @@ import { Country } from '../../interfaces/Country';
 export class CountryPageComponent implements OnInit{
 
   public country?:Country;
+  public isLoading:boolean = false;
 
   constructor(private activatedRoute:ActivatedRoute,
               private router:Router, 
@@ -19,13 +20,15 @@ export class CountryPageComponent implements OnInit{
 
 
   ngOnInit(): void {
+    this.isLoading = true;
     this.activatedRoute.params
     .pipe(
         switchMap(({id}) => this.countriesService.searchCountryAlphaCode(id))
     ).subscribe(country => {
       if(!country) return this.router.navigateByUrl('');
-
+        this.isLoading = false;
         return this.country = country;
+        
     });
 
 

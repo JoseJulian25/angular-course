@@ -1,0 +1,18 @@
+.spinner-container{
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    color: white;
+    padding: 2px 13px;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+    justify-content: space-around;
+    z-index: 1000;
+}
+
+svg {
+    width: 40px;
+}

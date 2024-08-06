@@ -3,7 +3,7 @@
 </div>
 
 <ng-template #table>
-    <table class="table table-hover"> 
+    <table class="table table-hover animate__animated animate__fadeIn d-none d-md-table"> 
         <thead>
             <tr>
                 <th>#</th>
@@ -16,7 +16,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let country of countries; let i = index">
+            <tr *ngFor="let country of countries; let i = index" class="animate__animated animate__fadeIn">
                 <td> {{i + 1}}</td>
                 <td>{{country.flag}}</td>
                 <td>
@@ -31,4 +31,20 @@
             </tr>
         </tbody>
     </table>
+
+    <div class="d-block d-md-none">
+        <div *ngFor="let country of countries; let i = index" class="card mb-3 animate__animated animate__fadeIn">
+          <div class="card-body">
+            <h5 class="card-title">#{{i + 1}} - {{country.name.common}}</h5>
+            <p class="card-text"><strong>Icon:</strong> {{country.flag}}</p>
+            <p class="card-text">
+              <strong>Bandera:</strong>
+              <img [src]="country.flags.svg" [alt]="country.name.common" style="max-width: 100px;">
+            </p>
+            <p class="card-text"><strong>Capital:</strong> {{country.capital}}</p>
+            <p class="card-text"><strong>Población:</strong> {{country.population | number}}</p>
+            <a [routerLink]="['/countries/by', country.cca3]" class="btn btn-primary">Ver más</a>
+          </div>
+        </div>
+      </div>
 </ng-template>
