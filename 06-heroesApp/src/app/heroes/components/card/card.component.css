@@ -1,0 +1,31 @@
+.hero-card {
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    background-color: white;
+}
+
+.hero-card:hover {
+    transform: scale(1.05);
+}
+
+.hero-image {
+    border-radius: 8px;
+    max-height: 280px;
+}
+
+.hero-content h4 {
+    color: var(--text-color);
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.hero-chip {
+    background-color: var(--accent-color);
+    color: white;
+    margin-right: 0.5rem;
+}
+
+.hero-actions .edit-button, .hero-actions .more-button {
+    color: var(--primary-color);
+}

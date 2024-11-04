@@ -1,0 +1,19 @@
+<div class="flex flex-column">
+    <span class="text-lg mb-4 text-center">Login</span>
+    <mat-form-field appearance="fill">
+        <mat-label>Usuario</mat-label>
+        <input type="text" matInput>
+        <mat-icon matSuffix>account_circle</mat-icon>
+    </mat-form-field>
+
+    <auth-password-input></auth-password-input>
+
+    <button mat-button mat-flat-button color="primary">
+        <mat-icon>login</mat-icon>
+        Ingresar
+    </button>
+    <div class="flex justify-content-end mt-5">
+        <a routerLink="/auth/register">¿No tienes cuenta? Registrate</a>
+    </div>
+        
+</div>
