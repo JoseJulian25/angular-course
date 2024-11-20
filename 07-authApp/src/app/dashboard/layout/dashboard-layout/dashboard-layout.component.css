@@ -1,0 +1,61 @@
+/* Contenedor general */
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #f4f4f9;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Cabecera del dashboard */
+  .dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: linear-gradient(95deg, rgba(96,207,220,1) 0%, rgba(190,52,218,1) 92%);
+    color: white;
+  }
+  
+  .dashboard-header h1 {
+    margin: 0;
+    font-size: 24px;
+  }
+  
+  .dashboard-header button {
+    padding: 8px 16px;
+    background-color: #922fa1;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .dashboard-header button:hover {
+    background-color: #6b1f7a;
+  }
+  
+  /* Contenido principal */
+  .dashboard-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+  }
+  
+  /* Tarjeta */
+  .card {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+  }
+  
+  .user-info p {
+    margin: 10px 0;
+  }
+  
